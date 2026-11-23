@@ -1,4 +1,4 @@
-# PDF to Word Converter — CortexLabs by Zaheer
+# PDF to Word Converter: CortexLabs by Zaheer
 
 A single-file Flask web utility (`app.py`) that converts PDF documents into editable Word (`.docx`) files with drag-and-drop upload, light/dark theme switching, and page/word count extraction feedback.
 
