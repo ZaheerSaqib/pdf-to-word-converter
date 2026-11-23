@@ -15,6 +15,11 @@ HTML_PAGE = """<!DOCTYPE html>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PDF to Word Converter — CortexLabs by Zaheer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f172a'/><path d='M30 25h26a4 4 0 0 1 4 4v16H46v14a4 4 0 0 1-4 4H30a4 4 0 0 1-4-4V29a4 4 0 0 1 4-4z' fill='%2310b981' opacity='0.85'/><path d='M46 45h24a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H46a4 4 0 0 1-4-4V49a4 4 0 0 1 4-4z' fill='%2334d399' opacity='0.7'/><circle cx='46' cy='45' r='6' fill='%2334d399'/><path d='M43 38h6v14h-6zm12 12h14v6H55zm-12 10h6v6h-6z' fill='%23ffffff'/><circle cx='46' cy='45' r='3' fill='%23ffffff'/></svg>" />
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
   <style>
     :root {
       --bg: #f4f7f5;
@@ -92,27 +97,32 @@ HTML_PAGE = """<!DOCTYPE html>
 
     .brand {
       display: flex;
-      align-items: baseline;
-      gap: 8px;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-logo-svg {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 4px var(--accent-ring));
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .brand-main {
       font-weight: 800;
-      font-size: 1.18rem;
+      font-size: 1.12rem;
       letter-spacing: -0.025em;
       color: var(--ink);
     }
-    .brand-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: inline-block;
-      margin-right: 2px;
-      transform: translateY(-1px);
-    }
-    .brand .by {
+    .brand-by {
       font-weight: 600;
-      font-size: 0.84rem;
+      font-size: 0.72rem;
       color: var(--muted);
-      letter-spacing: 0;
+      letter-spacing: 0.02em;
+      margin-top: 2px;
     }
 
     .header-actions {
@@ -433,9 +443,24 @@ HTML_PAGE = """<!DOCTYPE html>
 <body>
   <header>
     <div class="brand">
-      <span class="brand-dot"></span>
-      <span>CortexLabs</span>
-      <span class="by">by Zaheer</span>
+      <svg class="brand-logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 5.5C6 4.39543 6.89543 3.5 8 3.5H19L26 10.5V26.5C26 27.6046 25.1046 28.5 24 28.5H8C6.89543 28.5 6 27.6046 6 26.5V5.5Z" fill="url(#brandGrad)" />
+        <path d="M19 3.5V8.5C19 9.60457 19.8954 10.5 21 10.5H26" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="16" cy="18" r="4.5" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2 2" />
+        <path d="M14 15.5C12 17 12 19 14 20.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M18 15.5C20 17 20 19 18 20.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" />
+        <defs>
+          <linearGradient id="brandGrad" x1="6" y1="3.5" x2="26" y2="28.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#10b981" />
+            <stop offset="0.55" stop-color="#059669" />
+            <stop offset="1" stop-color="#047857" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="brand-text">
+        <span class="brand-main">CortexLabs</span>
+        <span class="brand-by">by Zaheer</span>
+      </div>
     </div>
     <div class="header-actions">
       <a class="btn-github" href="__GITHUB_URL__" target="_blank" rel="noopener noreferrer" title="Open GitHub & Star">
