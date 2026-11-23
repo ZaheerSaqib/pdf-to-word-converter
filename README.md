@@ -18,7 +18,7 @@ A single-file Flask web utility (`app.py`) that converts PDF documents into edit
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/ZaheerSaqib/pdf-to-word-converter.git](https://github.com/ZaheerSaqib/pdf-to-word-converter.git)
+   git clone https://github.com/ZaheerSaqib/pdf-to-word-converter.git
    cd pdf-to-word-converter
    ```
 
