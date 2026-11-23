@@ -1,7 +1,7 @@
 # PDF to Word Converter: CortexLabs by Zaheer
-https://pdf2doc-tool.vercel.app/
 
 A single-file Flask web utility (`app.py`) that converts PDF documents into editable Word (`.docx`) files with drag-and-drop upload, light/dark theme switching, and page/word count extraction feedback.
+Website: https://pdf2doc-tool.vercel.app/
 
 ## Features
 
